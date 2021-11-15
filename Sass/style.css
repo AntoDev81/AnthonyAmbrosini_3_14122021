@@ -1,0 +1,160 @@
+.flexcenter, p, .contenerbtn, .btnfonction, .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@font-face {
+  font-family: "Shrikhand";
+  src: url("shrikhand/Shrikhand-Regular.otf");
+}
+@font-face {
+  font-family: "roboto_condensedregular";
+  src: url("RobotoCondensed-Regular-webfont.eot");
+  src: url("RobotoCondensed-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("RobotoCondensed-Regular-webfont.woff2") format("woff2"), url("RobotoCondensed-Regular-webfont.woff") format("woff"), url("RobotoCondensed-Regular-webfont.ttf") format("truetype"), url("RobotoCondensed-Regular-webfont.svg#roboto_condensedregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/*Header*/
+.header {
+  width: 100%;
+  flex-direction: column;
+}
+
+.logoheader {
+  width: 50%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/*Formulaire Location*/
+.contenerlocation {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  border-top: #ebe7e7 solid 2px;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #F3F3F3;
+  font-size: 16px;
+  padding-left: 25px;
+}
+
+.txtlocation {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border: none;
+  background-color: #F3F3F3;
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/*1ere Section avec H1 et Bouton*/
+h1 {
+  display: flex;
+  text-align: center;
+  font-size: 28px;
+  font-family: "Shrikhand";
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+h2 {
+  font-family: "roboto_condensedregular";
+  display: flex;
+  text-align: center;
+  font-size: 15px;
+  color: silver;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: -10px;
+}
+
+.first {
+  background-color: #f9f8f8f6;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
+.btn {
+  display: flex;
+  background-color: #FF79DA;
+  border: none;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  border-radius: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  margin-left: 90px;
+  margin-right: 90px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 7px;
+  padding-left: 7px;
+}
+
+/* 2eme Section Fonctionnement et 3 boutons*/
+.fonction {
+  margin-top: 45px;
+}
+
+h3 {
+  font-size: 28px;
+  margin-left: 10px;
+}
+
+.number {
+  margin-right: -15px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  position: relative;
+}
+
+.pic {
+  margin-right: 30px;
+  margin-left: 5px;
+  font-size: 20px;
+}
+
+.btnfonction {
+  flex-direction: row;
+  background-color: #f9f8f8f6;
+  border: none;
+  box-shadow: 2px 3px #e7e5e5;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  border-radius: 20px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-right: 75px;
+  padding-left: 40px;
+  margin-bottom: 15px;
+  margin-right: 20px;
+  width: 255px;
+}
+
+.contenerbtn {
+  flex-direction: row;
+}
+
+p {
+  background-color: #9356DC;
+  border: none;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 20px;
+  width: 22px;
+  height: 22px;
+}
+
+/*3eme section Restaurants*//*# sourceMappingURL=style.css.map */

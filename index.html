@@ -1,31 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Sass/style.css" type="text/css" >
     <script src="https://kit.fontawesome.com/804671873b.js" crossorigin="anonymous"></script>
     <title>OhMyFooD</title>
 </head>
 <body>
     <header>
-        <div class="header"></div>
-        <div><i class="fas fa-map-marker-alt"></i><img src="images/logo/ohmyfood.png" alt="logo">
-        </div>
-        <div><input type="text" textarea name="place" placeholder="Paris, Belleville">
+        <div class="header">
+            <img src="images/logo/ohmyfood.png"  class="logoheader" alt="logo">
+            <div class="contenerlocation">
+                <div class="location">
+                    <i class="fas fa-map-marker-alt" class= "markerplace">
+                    </i><input type="text" textarea name="place" placeholder="Paris, Belleville" class="txtlocation"></div>
+            </div>
         </div>
     </header>
     <section class="first">
         <h1>Réservez le menu qui vous convient</h1>
-        <h2>Découvrez les restaurants d'exception sélectionnés par nos soins</h2>
+        <h2>Découvrez des restaurants d'exception sélectionnés par nos soins</h2>
         <a class="btn" href="">Explorer nos restaurants</a>
 </section>
     <section class="fonction">
         <h3>Fonctionnement</h3>
-        <a class="btnrestautant" href=""><p>1</p><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</a>
-        <a class="btnmenu" href=""><p>2</p><i class="fas fa-list"></i>Composez votre menu</a>
-        <a class="btnstore" href=""><p>3</p><i class="fas fa-store"></i>Dégustez au restaurant</a>
+            <div class="contenerbtn">
+                <div class="number"><p>1</p></div>
+                    <a class="btnfonction" href="">
+                        <div class= "pic"><i class="fas fa-mobile-alt"></i></div><span>Choisissez un restaurant</span></a></div>
+            </div>
+            <div class="contenerbtn">
+                <div class="number"><p>2</p></div>
+                    <a class="btnfonction" href="">
+                        <div class="pic"><i class="fas fa-list"></i></div><span>Composez votre menu</span></a></div>
+            </div>
+            <div class="contenerbtn">
+                <div class="number"><p>3</p></div>
+                    <a class="btnfonction" href="">               
+                        <div class="pic"><i class="fas fa-store"></i></div><span>Dégustez au restaurant</span></a></div>
     </section>
     <section class="restaurants">
         <h3>Restaurants</h3>
