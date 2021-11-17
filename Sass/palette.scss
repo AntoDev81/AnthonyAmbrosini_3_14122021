@@ -1,0 +1,191 @@
+@import "./_mixins";
+@import "./_placeholder";
+@import "./_variables";
+
+@font-face {
+    font-family: 'Shrikhand';
+    src: url('shrikhand/Shrikhand-Regular.otf');
+}
+@font-face {
+    font-family: 'roboto_condensedregular';
+    src: url('RobotoCondensed-Regular-webfont.eot');
+    src: url('RobotoCondensed-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('RobotoCondensed-Regular-webfont.woff2') format('woff2'),
+         url('RobotoCondensed-Regular-webfont.woff') format('woff'),
+         url('RobotoCondensed-Regular-webfont.ttf') format('truetype'),
+         url('RobotoCondensed-Regular-webfont.svg#roboto_condensedregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.header{
+    width: 100%;
+    @extend .flexcenter;
+}
+.logoheader{
+    width: 50%; 
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.arrow{
+    padding-left: 20px;
+    position: absolute;
+    top: 20px;
+    font-size: 20px;
+    color: black;
+}
+.bannerpic{
+    width: 100%;
+    height: 220px;
+    position: absolute;
+}
+                    /*MENU*/
+.menu{
+    background-color: #F3F3F3;
+    border-radius: 25px 25px 0px 0px;
+    position: absolute;
+    top: 240px;
+    width: 100%;
+}
+.containername{
+    @extend .flexcenter;
+    flex-direction: row;
+    margin-left: -10px;
+}
+h1{
+    font-size: 30px;
+    margin-left: -5px;
+}
+.heart{
+    font-size: 25px;
+    margin-left: 50px;
+    margin-top: 2px;
+}
+                        /*PROPOSITIONS PLATS*/
+h2{
+    font-weight: normal;
+    font-size: 18px;
+    margin-left: 10px;
+}
+span{
+    border-bottom: 2px solid $Tertiary-color;
+    padding-bottom: 5px;
+}
+.txtsticker{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px;
+    margin-left: 8px;
+    margin-right: 8px;
+    box-shadow: 2px 3px rgb(231, 229, 229);
+    margin-bottom: 10px;
+}
+.naming, .sidedish, .price{
+    margin-left: 10px;
+}
+.naming{
+    display: flex;
+    margin-bottom: -30px;
+    margin-top: -10px;
+}
+.sidedish{
+    display: flex;
+    flex-direction: row;
+}
+p{
+    font-size: 15px;
+}
+.price1{
+    @extend .price;
+    margin-left: 150Px;
+}
+.price2{
+    @extend .price;
+    margin-left: 103px;
+}
+.price3{
+    @extend .price;
+    margin-left: 54px;
+}
+.price4{
+    @extend .price;
+    margin-left: 29px;
+}
+.price5{
+    @extend .price;
+    margin-left: 51px;
+}
+.price6{
+    @extend .price;
+    margin-left: 202px;
+}
+.price7{
+    @extend .price;
+    margin-left: 233px;
+}
+.price8{
+    @extend .price;
+    margin-left: 71px;
+}
+.price9{
+    @extend .price;
+    margin-left: 41px;
+}
+            /*BOUTON COMMANDER*/
+.btn{
+    display: flex;
+    background: linear-gradient($Secondary-color,#9408f1);
+    border: none;
+    color: white ;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 20px;
+    justify-content: center;
+    margin-left: 115px;
+    margin-right: 115px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 7px;
+    padding-left: 7px;
+    box-shadow: 3px 3px rgb(231, 229, 229);
+}
+                    /*FOOTER*/    
+.footer{
+    background-color: rgb(71, 67, 67);
+    position: absolute;
+    bottom: -170px;
+    width: 100%;
+    }
+h6{
+    color: white;
+    font-size: 20px;
+    margin-left: 15px;
+    padding-top: 15px;
+    margin-bottom: 25px;
+    margin-top: 0px;
+}   
+.txtfooter{
+    font-size: 15px;
+    color: white;
+    margin-left: 15px;
+    padding-bottom: 30px;
+} 
+.proposition, .partnair{
+    display: flex;
+    margin-bottom: 5px;
+}
+.ustensil{
+    display: flex;
+    margin-right: 10px;
+                    }
+.hands{
+    display: flex;
+    margin-right: 8px;
+    font-size: 11px;
+}
+.mentions{
+    margin-bottom: 5px;
+}

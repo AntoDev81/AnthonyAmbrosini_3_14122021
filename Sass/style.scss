@@ -6,22 +6,26 @@
     font-family: 'Shrikhand';
     src: url('shrikhand/Shrikhand-Regular.otf');
 }
+
 @font-face {
+        font-family: 'robotobold';
+        src: url('Roboto-Bold-webfont.eot');
+        src: url('Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+             url('Roboto-Bold-webfont.woff2') format('woff2'),
+             url('Roboto-Bold-webfont.woff') format('woff'),
+             url('Roboto-Bold-webfont.ttf') format('truetype'),
+             url('Roboto-Bold-webfont.svg#robotobold') format('svg');
+        font-weight: normal;
+        font-style: normal;
+}
+body{
     font-family: 'roboto_condensedregular';
-    src: url('RobotoCondensed-Regular-webfont.eot');
-    src: url('RobotoCondensed-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('RobotoCondensed-Regular-webfont.woff2') format('woff2'),
-         url('RobotoCondensed-Regular-webfont.woff') format('woff'),
-         url('RobotoCondensed-Regular-webfont.ttf') format('truetype'),
-         url('RobotoCondensed-Regular-webfont.svg#roboto_condensedregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+    font-weight: bold;
 }
                                     /*Header*/
 .header{
     width: 100%;
     @extend .flexcenter;
-    flex-direction: column;
 }
 .logoheader{
     width: 50%; 
@@ -29,7 +33,7 @@
     margin-top: 10px;
 }
                     /*Formulaire Location*/
-.contenerlocation{
+.containerlocation{
     display: flex;
     width: 100%;
     justify-content: center;
@@ -59,16 +63,16 @@ h1{
     display: flex;
     text-align: center;
     font-size: 28px;
-    font-family: 'Shrikhand';
+    font-weight: bold;
     margin-right: 50px;
     margin-left: 50px;
 }
 h2{
-    font-family: 'roboto_condensedregular';
     display: flex;
     text-align: center;
-    font-size: 15px;
-    color:silver;
+    font-size: 16px;
+    font-weight: normal;
+    color:rgb(138, 136, 136);
     margin-right: 20px;
     margin-left: 20px;
     margin-top: -10px;
@@ -80,11 +84,12 @@ h2{
 }
 .btn{
     display: flex;
-    background-color: $Secondary-color;
+    background: linear-gradient($Secondary-color,#9408f1);
     border: none;
     color: white ;
     text-decoration: none;
     font-size: 15px;
+    font-weight: normal;
     border-radius: 20px;
     justify-content: center;
     margin-top: 20px;
@@ -94,7 +99,14 @@ h2{
     padding-bottom: 10px;
     padding-right: 7px;
     padding-left: 7px;
+    box-shadow: 1px 5px #c9c6c6;
+    transition: 2s;
+    &:hover{
+        background: $Secondary-color;
+        box-shadow: 3px 7px #c9c6c6;
+    }
 }
+
                     /* 2eme Section Fonctionnement et 3 boutons*/
 .fonction{
     margin-top: 45px;
@@ -130,10 +142,10 @@ h3{
     padding-right: 75px;
     padding-left: 40px;
     margin-bottom: 15px;
-    margin-right: 20px;
+    margin-right: 10px;
     width: 255px
 }
-.contenerbtn{
+.containerbtn{
     @extend .flexcenter;
     flex-direction: row;
 }
@@ -148,5 +160,123 @@ p{
     height: 22px;
     @extend .flexcenter;
 }
-
                     /*3eme section Restaurants*/
+.restaurants{
+    background-color: #F3F3F3;
+    padding-top: 15px;
+    padding-bottom: 30px;
+}           
+.sticker{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    width: 95%;
+    margin-left: 10px;
+    margin-bottom: 25px;
+    margin-top: -10px;
+    overflow: hidden;
+    box-shadow: #dddada 3px 3px;
+}
+.containerpic{
+    position: relative;
+}
+.new{
+    @extend .flexcenter;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(12, 129, 81);
+    background-color: $Tertiary-color;
+    position: absolute;
+    width: 75px;
+    height: 25px;
+    left: 260px;
+    top: 15px;
+}
+.picture{
+    width: 100%;
+    height: 180px;
+}
+h4{
+    margin-top: 4px;
+    font-size: 21px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+.heart1{
+    @extend .heart;
+    margin-left: 120px;
+}
+.fa-heart{
+    background-color: white;
+    transition: 0s;
+    &:hover{
+        transition: 5s;
+        color: $Secondary-color;
+    }
+}
+
+.heart2{
+    @extend .heart;
+    margin-left: 130px;
+}
+.heart3{
+    @extend .heart;
+    margin-left: 162px;
+}
+.heart4{
+    @extend .heart;
+    margin-left: 126px;
+}
+h5{
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: -25px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.txtrestaurants{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+} 
+                    /*FOOTER*/    
+.footer{
+    background-color: rgb(71, 67, 67);
+}
+ h6{
+     font-family: 'shrikhand';
+     color: white;
+     font-size: 20px;
+     margin-left: 15px;
+     padding-top: 15px;
+     margin-bottom: 10px;
+     margin-top: 0px;
+}   
+.txtfooter{
+    font-size: 15px;
+    font-weight: normal;
+    color: white;
+    margin-left: 15px;
+    padding-bottom: 30px;
+} 
+.proposition, .partnair{
+    display: flex;
+    margin-bottom: 5px;
+}
+.ustensil{
+    display: flex;
+    margin-right: 10px;
+}
+.hands{
+    display: flex;
+    margin-right: 8px;
+    font-size: 11px;
+}
+.mentions{
+    margin-bottom: 5px
+}
+.contact{
+    color: white;
+    text-decoration: none;
+}
