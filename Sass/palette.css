@@ -147,9 +147,6 @@ span {
   text-decoration: none;
   color: black;
 }
-.sticker:hover + .ok {
-  transform: translateY(50px, 10px);
-}
 
 .txtsticker {
   display: flex;
@@ -160,6 +157,10 @@ span {
   margin-right: 8px;
   box-shadow: 2px 3px #e7e5e5;
   margin-bottom: 10px;
+}
+.txtsticker:active .ok {
+  transition: 2s;
+  transform: translateX(-50px);
 }
 
 h3 {
@@ -189,6 +190,10 @@ p {
 
 .price1 {
   margin-left: 182Px;
+}
+.price1:active .ok {
+  transition: 2s;
+  transform: translateX(-100px);
 }
 
 .price2 {

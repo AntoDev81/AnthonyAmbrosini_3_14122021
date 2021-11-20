@@ -121,9 +121,10 @@ span{
     margin-right: 8px;
     box-shadow: 2px 3px rgb(231, 229, 229);
     margin-bottom: 10px;
-    &:hover + .ok{
+    &:active .ok{
         transition: 2s;
-        transform: translateY(50px, 10px);
+        transform: translateX(-50px);
+    }
 }
 h3{
     font-family:'robotobold';
@@ -148,6 +149,10 @@ p{
 .price1{
     @extend .price;
     margin-left: 182Px;
+    &:active .ok{
+        transition: 2s;
+        transform: translateX(-100px);
+    }
 }
 .price2{
     @extend .price;
@@ -222,7 +227,7 @@ p{
     position: absolute;
     bottom: -170px;
     width: 100%;
-    }
+}
 h6{
     font-family: 'shrikhand';
     font-weight: normal;
@@ -246,7 +251,7 @@ h6{
 .ustensil{
     display: flex;
     margin-right: 10px;
-                    }
+}
 .hands{
     display: flex;
     margin-right: 8px;
