@@ -32,10 +32,12 @@ body{
     font-family: 'roboto_condensedbold';
     font-weight: bold;
 }
+
+@media screen and (max-width: 736px) {
                                     /*Header*/
 .header{
     width: 100%;
-    @extend .flexcenter;
+    @include flexcenter;
 }
 .logoheader{
     width: 50%; 
@@ -146,7 +148,7 @@ h3{
     font-size: 20px
 }
 .btnfonction{
-    @extend.flexcenter;
+    @include flexcenter;
     flex-direction: row;
     background-color: #f9f8f8f6;
     border: none;
@@ -164,7 +166,7 @@ h3{
     width: 255px
 }
 .containerbtn{
-    @extend .flexcenter;
+    @include flexcenter;
     flex-direction: row;
 }
 p{
@@ -176,7 +178,7 @@ p{
     border-radius: 20px;
     width: 22px;
     height: 22px;
-    @extend .flexcenter;
+    @include flexcenter;
 }
                     /*3eme section Restaurants*/
 .restaurants{
@@ -200,7 +202,7 @@ p{
     position: relative;
 }
 .new{
-    @extend .flexcenter;
+    @include flexcenter;
     font-size: 15px;
     font-weight: bold;
     color: rgb(12, 129, 81);
@@ -222,7 +224,7 @@ h4{
     font-weight: bold;
 }
 .heart1{
-    @extend .heart;
+    @include heart;
     margin-left: 120px;
 }
 .fa-heart{
@@ -233,15 +235,15 @@ h4{
     }
 }
 .heart2{
-    @extend .heart;
+    @include heart;
     margin-left: 130px;
 }
 .heart3{
-    @extend .heart;
+    @include heart;
     margin-left: 162px;
 }
 .heart4{
-    @extend .heart;
+    @include heart;
     margin-left: 126px;
 }
 h5{
@@ -299,4 +301,10 @@ h5{
 .contact{
     color: white;
     text-decoration: none;
+}
+}
+@media screen and (min-width: 1024px) {
+    h1{
+        justify-content: center;
+    }
 }

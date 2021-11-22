@@ -1,0 +1,28 @@
+@mixin flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin heart {
+    display: flex;
+    font-size: 23px;
+    margin-top: 12px;
+    text-decoration: none;
+}
+@mixin price{
+    font-family: 'robotobold';
+    display: flex;
+    font-size: 15px;
+    margin-top: 15px;
+    margin-right: 20px;
+}
+@keyframes opening{
+    from{
+        transform: translateY(150px);
+        opacity:0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

@@ -31,6 +31,24 @@ body{
     font-family:'roboto_condensedlight';
     font-weight: bold;
 }
+.loader {
+    display: none;
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 3s linear;
+
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); 
+    opacity: 1;}
+    100% { transform: rotate(360deg);
+    opacity: O;
+    transition-duration: 5s;
+    }
+}
 .header{
     width: 100%;
     @extend .flexcenter;
@@ -95,16 +113,6 @@ span{
 .transition3{
     animation: opening 4s;
 }
-@keyframes opening{
-    from{
-        transform: translateY(150px);
-        opacity:0;
-    }
-    to{
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
 .title{
     margin-bottom: 25px;
 }
@@ -122,8 +130,8 @@ span{
     box-shadow: 2px 3px rgb(231, 229, 229);
     margin-bottom: 10px;
     &:active .ok{
-        transition: 2s;
-        transform: translateX(-50px);
+        transition: 1s;
+        transform: translateX(-60px);
     }
 }
 h3{
@@ -140,57 +148,24 @@ h3{
 }
 .sidedish{
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
 }
 p{
     font-size: 15px;
     font-weight: normal
 }
-.price1{
+.price1, .price2, .price3, .price4, .price5, .price6, .price7, .price8, .price9{
     @extend .price;
-    margin-left: 182Px;
-    &:active .ok{
-        transition: 2s;
-        transform: translateX(-100px);
+}
+.price1:active{
+        transition: 1s;
+        transform: translateX(-50px);
     }
-}
-.price2{
-    @extend .price;
-    margin-left: 136px;
-}
-.price3{
-    @extend .price;
-    margin-left: 91px;
-}
-.price4{
-    @extend .price;
-    margin-left: 65px;
-}
-.price5{
-    @extend .price;
-    margin-left: 86px;
-}
-.price6{
-    @extend .price;
-    margin-left: 227px;
-}
-.price7{
-    @extend .price;
-    margin-left: 257px;
-}
-.price8{
-    @extend .price;
-    margin-left: 105px;
-}
-.price9{
-    @extend .price;
-    margin-left: 77px;
-}
 .ok{
     @extend .flexcenter;
     background-color: #99E2D0;
     width: 60px;
-    left: 309px;
+    left: 380px;
     position: absolute;
     overflow: hidden;
     border-radius: 0px 15px 15px 0px;
