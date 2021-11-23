@@ -51,7 +51,7 @@ body{
 }
 .header{
     width: 100%;
-    @extend .flexcenter;
+    @include flexcenter;
 }
 .logoheader{
     width: 50%; 
@@ -79,7 +79,7 @@ body{
     width: 100%;
 }
 .containername{
-    @extend .flexcenter;
+    @include flexcenter;
     flex-direction: row;
     margin-left: -10px;
 }
@@ -120,6 +120,19 @@ span{
     text-decoration: none;
     color: black;
 }
+.ok{
+    background-color: #99E2D0;
+    width: 60px;
+    left: 380px;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 0px 15px 15px 0px;
+    height: 65px;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    color: white;
+}
 .txtsticker{
     display: flex;
     flex-direction: column;
@@ -130,8 +143,9 @@ span{
     box-shadow: 2px 3px rgb(231, 229, 229);
     margin-bottom: 10px;
     &:active .ok{
+        display: flex;
         transition: 1s;
-        transform: translateX(-60px);
+        transform: translateX(-70px);
     }
 }
 h3{
@@ -155,26 +169,13 @@ p{
     font-weight: normal
 }
 .price1, .price2, .price3, .price4, .price5, .price6, .price7, .price8, .price9{
-    @extend .price;
+    @include price;
 }
 .price1:active{
         transition: 1s;
         transform: translateX(-50px);
     }
-.ok{
-    @extend .flexcenter;
-    background-color: #99E2D0;
-    width: 60px;
-    left: 380px;
-    position: absolute;
-    overflow: hidden;
-    border-radius: 0px 15px 15px 0px;
-    height: 65px;
-    justify-content: center;
-    align-items: center;
-    font-size: 19px;
-    color: white;
-}
+
             /*BOUTON COMMANDER*/
 .btn{
     display: flex;
@@ -186,15 +187,18 @@ p{
     font-weight: bold;
     border-radius: 20px;
     justify-content: center;
-    margin-left: 115px;
-    margin-right: 115px;
-    margin-top: 35px;
+    margin-top: 30px;
     margin-bottom: 35px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 7px;
     padding-left: 7px;
     box-shadow: 3px 3px rgb(231, 229, 229);
+    width: 100px;
+}
+.movebtn{
+    display: flex;
+    justify-content: center;
 }
                     /*FOOTER*/    
 .footer{
@@ -241,3 +245,24 @@ h6{
     color: white;
     text-decoration: none;
 }
+@media screen and (min-width: 500px) { /*Ipad*/
+    .ok{
+        left: 770px;
+    }
+    .btn{
+        width: 150px;
+    }
+}
+@media screen and (min-width: 768px){
+    .ok{
+        display: none;
+    }
+    .ok:hover{
+        display: flex;
+        transition: 3s
+    }
+}
+
+
+
+

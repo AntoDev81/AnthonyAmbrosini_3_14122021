@@ -32,8 +32,6 @@ body{
     font-family: 'roboto_condensedbold';
     font-weight: bold;
 }
-
-@media screen and (max-width: 736px) {
                                     /*Header*/
 .header{
     width: 100%;
@@ -95,6 +93,10 @@ h2{
     padding-top: 10px;
     padding-bottom: 40px;
 }
+.movebtn{
+    display: flex;
+    justify-content: center;
+}
 .btn{
     display: flex;
     background: linear-gradient($Secondary-color,#9408f1);
@@ -107,8 +109,6 @@ h2{
     border-radius: 20px;
     justify-content: center;
     margin-top: 20px;
-    margin-left: 90px;
-    margin-right: 90px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 7px;
@@ -191,14 +191,14 @@ p{
     flex-direction: column;
     background-color: white;
     border-radius: 10px 10px 10px 10px;
-    width: 95%;
+    width: 97%;
     margin-left: 10px;
     margin-bottom: 25px;
     margin-top: -10px;
     overflow: hidden;
     box-shadow: #dddada 3px 3px;
 }
-.containerpic{
+.containerpic{ /*utile pour la position de la div new*/
     position: relative;
 }
 .new{
@@ -223,9 +223,13 @@ h4{
     margin-left: 10px;
     font-weight: bold;
 }
-.heart1{
+.txtheart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+.heart1, .heart2, .heart4, .heart3{
     @include heart;
-    margin-left: 120px;
 }
 .fa-heart{
     transition: 0s;
@@ -233,18 +237,6 @@ h4{
         transition: 5s;
         color: $Secondary-color;
     }
-}
-.heart2{
-    @include heart;
-    margin-left: 130px;
-}
-.heart3{
-    @include heart;
-    margin-left: 162px;
-}
-.heart4{
-    @include heart;
-    margin-left: 126px;
 }
 h5{
     font-family: 'roboto_condensedlight';
@@ -256,6 +248,7 @@ h5{
 }
 .txtrestaurants{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     margin-top: 5px;
 } 
@@ -302,9 +295,77 @@ h5{
     color: white;
     text-decoration: none;
 }
-}
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 500px) { /*Ipad*/
     h1{
         justify-content: center;
     }
+    h2{
+        justify-content: center;
+    }
+    .btn{
+        width: 200px;
+    }
+    .picture{
+        object-fit: cover;
+    }
+    .new{
+        left: 5px;
+    }
+    .txtrestaurants{
+        flex-direction: column;
+    }
 }
+@media screen and (min-width: 801px) {
+    .location{
+        height: 100px;
+        padding-left: 120px;
+        font-size: 35px;
+    }
+    .txtlocation{
+        font-size: 35px;
+    }
+    h1{
+        font-size: 35px;
+    }
+    h2{
+        font-size: 35px;
+    }
+    .first{
+        display: flex;
+        flex-direction: column;
+    }
+    .btn{
+        width: 290px;
+        font-size: 25px;
+    }
+    .btnfonction{
+        width: 320px;
+        font-size: 25px;
+    }
+    p{
+        font-size: 30px;
+        width: 35px;
+        height: 35px;
+    }
+    .restaurants{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .sticker{
+        width: 45%;
+        margin-bottom: 50px;
+        margin-right: 25px;
+    }
+    .new{
+        width: 100px;
+        height: 40px;
+    }
+    h3{
+        font-size: 40px;
+    }
+}
+
+
+
