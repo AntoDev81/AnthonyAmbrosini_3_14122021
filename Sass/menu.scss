@@ -31,23 +31,32 @@ body{
     font-family:'roboto_condensedlight';
     font-weight: bold;
 }
-.loader {
-    display: none;
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
+@keyframes spin {
+    0% { transform: rotate(0deg);
+        opacity: 0;
+    }
+    50% { transform: rotate(360deg);
+        opacity: 1;
+        
+    }
+    100% {
+        visibility: hidden;
+    }
+}
+.imgcook{
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 30%;
+    left: 25%;
     animation: spin 3s linear;
+    animation-fill-mode: forwards;
 
 }
-@keyframes spin {
-    0% { transform: rotate(0deg); 
-    opacity: 1;}
-    100% { transform: rotate(360deg);
-    opacity: O;
-    transition-duration: 5s;
-    }
+.allmenu{
+    animation: appear 0s 3s forwards;
+    visibility: hidden;
 }
 .header{
     width: 100%;
@@ -105,13 +114,13 @@ span{
     padding-bottom: 5px;
 }
 .transition1{
-    animation: opening 2s;
+    animation: opening 7s;
 }
 .transition2{
-    animation: opening 3s;
+    animation: opening 8s;
 }
 .transition3{
-    animation: opening 4s;
+    animation: opening 9s;
 }
 .title{
     margin-bottom: 25px;
@@ -122,8 +131,8 @@ span{
 }
 .ok{
     background-color: #99E2D0;
-    width: 60px;
-    left: 380px;
+    width: 0px;
+    left: 310px;
     position: absolute;
     overflow: hidden;
     border-radius: 0px 15px 15px 0px;
@@ -143,9 +152,16 @@ span{
     box-shadow: 2px 3px rgb(231, 229, 229);
     margin-bottom: 10px;
     &:active .ok{
+        visibility: visible;
         display: flex;
         transition: 1s;
-        transform: translateX(-70px);
+        width: 60px;
+        
+    }
+    &:active .price{
+        display: flex;
+        transition: 1s;
+        transform: translate(-70px);
     }
 }
 h3{
@@ -164,17 +180,26 @@ h3{
     display: flex;
     justify-content: space-between;
 }
+.ellipsis{
+    display: block;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 p{
     font-size: 15px;
-    font-weight: normal
+    font-weight: normal;
+    
 }
-.price1, .price2, .price3, .price4, .price5, .price6, .price7, .price8, .price9{
-    @include price;
+.price{
+    font-family: 'robotobold';
+    display: flex;
+    font-size: 15px;
+    margin-top: 15px;
+    margin-right: 20px;
 }
-.price1:active{
-        transition: 1s;
-        transform: translateX(-50px);
-    }
+
 
             /*BOUTON COMMANDER*/
 .btn{
@@ -246,21 +271,52 @@ h6{
     text-decoration: none;
 }
 @media screen and (min-width: 500px) { /*Ipad*/
-    .ok{
-        left: 770px;
+    .arrow{
+        font-size: 30px;
+        top: 30px;
     }
+  .ok{
+      left: 700px;
+  }
     .btn{
         width: 150px;
     }
+    .imgcook{
+        width: 250px;
+        height: 250px;
+        left: 35%;
+    }
 }
-@media screen and (min-width: 768px){
-    .ok{
-        display: none;
+@media screen and (min-width: 769px){
+    .arrow{
+        top: 50px;
     }
-    .ok:hover{
+    .bannerpic{
+        @include flexcenter;
+        width: 100%;
+        height: 400px;
+        position: absolute;
+    }
+    .allmenu{
         display: flex;
-        transition: 3s
+        flex-direction: column;
     }
+    .menu{
+        top: 475px
+    }
+    .flexmenu{
+        display: flex;
+        justify-content: space-around;
+    }
+    .txtsticker{
+        width: 110%;
+    }
+    .imgcook{
+        width: 300px;
+        height: 300px;
+        left: 40%;
+    }
+    
 }
 
 

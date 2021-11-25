@@ -18,6 +18,16 @@
     opacity: 1;
   }
 }
+@-webkit-keyframes appear {
+  to {
+    visibility: visible;
+  }
+}
+@keyframes appear {
+  to {
+    visibility: visible;
+  }
+}
 @font-face {
   font-family: "Shrikhand";
   src: url("shrikhand/Shrikhand-Regular.otf");
