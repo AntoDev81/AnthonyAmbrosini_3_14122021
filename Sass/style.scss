@@ -114,14 +114,14 @@ h2{
     padding-right: 7px;
     padding-left: 7px;
     box-shadow: 1px 5px #c9c6c6;
-    transition: 2s;
+    transition: 2s; 
     &:hover{
         background: $Secondary-color;
-        box-shadow: 3px 7px #c9c6c6;
-        transition: 1s;
+        box-shadow: 3px 7px #504d4d;
+        transition: .5s;
+        transform: scale(1.1);
     }
 }
-
                     /* 2eme Section Fonctionnement et 3 boutons*/
 .fonction{
     margin-top: 45px;
@@ -228,14 +228,24 @@ h4{
     flex-direction: row;
     justify-content: space-between
 }
-.heart1, .heart2, .heart4, .heart3{
-    @include heart;
+.empty{
+    position: relative;
+    z-index: 0;
 }
-.fa-heart{
-    transition: 0s;
-    &:active{
-        transition: 5s;
-        color: $Secondary-color;
+.full{
+    position: absolute;
+    z-index: -1;
+    color: $Secondary-color;
+}
+.heart {
+    display: flex;
+    font-size: 23px;
+    margin-top: 12px;
+    margin-right: 20px;
+    text-decoration: none;
+    &:hover .full{
+        z-index: 1;
+        transition: 3s;
     }
 }
 h5{
@@ -339,7 +349,7 @@ h5{
         font-size: 25px;
     }
     .btnfonction{
-        width: 320px;
+        width: 350px;
         font-size: 25px;
     }
     p{

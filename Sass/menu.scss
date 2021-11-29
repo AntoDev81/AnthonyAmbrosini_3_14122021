@@ -31,18 +31,6 @@ body{
     font-family:'roboto_condensedlight';
     font-weight: bold;
 }
-@keyframes spin {
-    0% { transform: rotate(0deg);
-        opacity: 0;
-    }
-    50% { transform: rotate(360deg);
-        opacity: 1;
-        
-    }
-    100% {
-        visibility: hidden;
-    }
-}
 .imgcook{
     display: block;
     position: absolute;
@@ -52,7 +40,6 @@ body{
     left: 25%;
     animation: spin 3s linear;
     animation-fill-mode: forwards;
-
 }
 .allmenu{
     animation: appear 0s 3s forwards;
@@ -93,9 +80,13 @@ body{
     margin-left: -10px;
 }
 h1{
+    display: block;
     font-family: 'shrikhand';
     font-size: 30px;
     margin-left: -7px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .heart{
     font-size: 25px;
@@ -129,22 +120,28 @@ span{
     text-decoration: none;
     color: black;
 }
+.okposition{
+    display: flex;
+    justify-content: flex-end;
+}
 .ok{
     background-color: #99E2D0;
-    width: 0px;
-    left: 310px;
+    width: 60px;
     position: absolute;
-    overflow: hidden;
     border-radius: 0px 15px 15px 0px;
     height: 65px;
     justify-content: center;
     align-items: center;
     font-size: 19px;
     color: white;
+    z-index: -1;
+    animation: slide;
+    transition: 1s;
 }
 .txtsticker{
     display: flex;
     flex-direction: column;
+    width: 98%;
     background-color: white;
     border-radius: 15px;
     margin-left: 8px;
@@ -152,11 +149,11 @@ span{
     box-shadow: 2px 3px rgb(231, 229, 229);
     margin-bottom: 10px;
     &:active .ok{
-        visibility: visible;
         display: flex;
+        z-index: 0;
+        transform-origin: right 50%;
         transition: 1s;
         width: 60px;
-        
     }
     &:active .price{
         display: flex;
@@ -180,17 +177,13 @@ h3{
     display: flex;
     justify-content: space-between;
 }
-.ellipsis{
-    display: block;
-    width: 200px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
 p{
     font-size: 15px;
     font-weight: normal;
-    
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .price{
     font-family: 'robotobold';
@@ -199,8 +192,6 @@ p{
     margin-top: 15px;
     margin-right: 20px;
 }
-
-
             /*BOUTON COMMANDER*/
 .btn{
     display: flex;
@@ -220,6 +211,12 @@ p{
     padding-left: 7px;
     box-shadow: 3px 3px rgb(231, 229, 229);
     width: 100px;
+    &:hover{
+        background: $Secondary-color;
+        box-shadow: 3px 7px #504d4d;
+        transition: 1s;
+        transform: scale(1.1);
+    }
 }
 .movebtn{
     display: flex;
@@ -275,9 +272,6 @@ h6{
         font-size: 30px;
         top: 30px;
     }
-  .ok{
-      left: 700px;
-  }
     .btn{
         width: 150px;
     }
@@ -287,7 +281,7 @@ h6{
         left: 35%;
     }
 }
-@media screen and (min-width: 769px){
+@media screen and (min-width: 1000px){
     .arrow{
         top: 50px;
     }
@@ -309,14 +303,24 @@ h6{
         justify-content: space-around;
     }
     .txtsticker{
-        width: 110%;
+        width: 310px;
     }
     .imgcook{
         width: 300px;
         height: 300px;
         left: 40%;
     }
-    
+    .btn{
+        width: 200px;
+        height: 35px;
+        font-size: 25px;
+    }
+    .txtfooter{
+        display: flex;
+    }
+    .proposition, .partnair, .mentions, .contact{
+        width: 185px;
+    }
 }
 
 

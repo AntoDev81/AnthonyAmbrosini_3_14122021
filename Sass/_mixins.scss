@@ -32,3 +32,29 @@
         visibility: visible;
     }
 }
+@keyframes spin {
+    0% { transform: rotate(0deg);
+        opacity: 0;
+    }
+    50% { transform: rotate(360deg);
+        opacity: 1;
+        
+    }
+    100% {
+        visibility: hidden;
+    }
+}
+@keyframes slide {
+    0%{
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(30px);
+        opacity: .5;
+    }
+    100%{
+        transform: translateX(60px);
+        opacity: 1;
+    }
+}
