@@ -1,132 +1,107 @@
 @-webkit-keyframes opening {
   from {
-    -webkit-transform: translateY(150px);
-            transform: translateY(150px);
+    transform: translateY(150px);
     opacity: 0;
   }
   to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
-
 @keyframes opening {
   from {
-    -webkit-transform: translateY(150px);
-            transform: translateY(150px);
+    transform: translateY(150px);
     opacity: 0;
   }
   to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
-
 @-webkit-keyframes appear {
   to {
     visibility: visible;
   }
 }
-
 @keyframes appear {
   to {
     visibility: visible;
   }
 }
-
 @-webkit-keyframes spin {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
     opacity: 0;
   }
   50% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
     opacity: 1;
   }
   100% {
     visibility: hidden;
   }
 }
-
 @keyframes spin {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
     opacity: 0;
   }
   50% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
     opacity: 1;
   }
   100% {
     visibility: hidden;
   }
 }
-
 @-webkit-keyframes slide {
   0% {
-    -webkit-transform: translateX(-10px);
-            transform: translateX(-10px);
+    transform: translateX(-10px);
     opacity: 0;
   }
   50% {
-    -webkit-transform: translateX(30px);
-            transform: translateX(30px);
-    opacity: .5;
+    transform: translateX(30px);
+    opacity: 0.5;
   }
   100% {
-    -webkit-transform: translateX(60px);
-            transform: translateX(60px);
+    transform: translateX(60px);
     opacity: 1;
   }
 }
-
 @keyframes slide {
   0% {
-    -webkit-transform: translateX(-10px);
-            transform: translateX(-10px);
+    transform: translateX(-10px);
     opacity: 0;
   }
   50% {
-    -webkit-transform: translateX(30px);
-            transform: translateX(30px);
-    opacity: .5;
+    transform: translateX(30px);
+    opacity: 0.5;
   }
   100% {
-    -webkit-transform: translateX(60px);
-            transform: translateX(60px);
+    transform: translateX(60px);
     opacity: 1;
   }
 }
-
 @font-face {
-  font-family: 'Shrikhand';
+  font-family: "Shrikhand";
   src: url("shrikhand/Shrikhand-Regular.otf");
 }
-
 @font-face {
-  font-family: 'roboto_condensedlight';
+  font-family: "roboto_condensedlight";
   src: url("RobotoCondensed-Light-webfont.eot");
   src: url("RobotoCondensed-Light-webfont.eot?#iefix") format("embedded-opentype"), url("RobotoCondensed-Light-webfont.woff") format("woff"), url("RobotoCondensed-Light-webfont.ttf") format("truetype"), url("RobotoCondensed-Light-webfont.svg#roboto_condensedlight") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'robotobold';
+  font-family: "robotobold";
   src: url("Roboto-Bold-webfont.eot");
   src: url("Roboto-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("Roboto-Bold-webfont.woff") format("woff"), url("Roboto-Bold-webfont.ttf") format("truetype"), url("Roboto-Bold-webfont.svg#robotobold") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-
 body {
-  font-family: 'roboto_condensedlight';
+  font-family: "roboto_condensedlight";
   font-weight: bold;
 }
 
@@ -151,15 +126,9 @@ body {
 
 .header {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .logoheader {
@@ -192,25 +161,16 @@ body {
 }
 
 .containername {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   margin-left: -10px;
 }
 
 h1 {
   display: block;
-  font-family: 'shrikhand';
+  font-family: "shrikhand";
   font-size: 30px;
   margin-left: -7px;
   white-space: nowrap;
@@ -261,77 +221,50 @@ span {
 }
 
 .okposition {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .ok {
+  display: flex;
   background-color: #99E2D0;
   width: 60px;
   position: absolute;
   border-radius: 0px 15px 15px 0px;
   height: 65px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   font-size: 19px;
   color: white;
   z-index: -1;
-  -webkit-animation: slide;
-          animation: slide;
-  -webkit-transition: 1s;
-  transition: 1s;
 }
 
 .txtsticker {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 98%;
   background-color: white;
   border-radius: 15px;
   margin-left: 8px;
   margin-right: 8px;
-  -webkit-box-shadow: 2px 3px #e7e5e5;
-          box-shadow: 2px 3px #e7e5e5;
+  box-shadow: 2px 3px #e7e5e5;
   margin-bottom: 10px;
+  cursor: pointer;
 }
-
 .txtsticker:active .ok {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   z-index: 0;
-  -webkit-transform-origin: right 50%;
-          transform-origin: right 50%;
-  -webkit-transition: 1s;
+  transform-origin: right 50%;
   transition: 1s;
   width: 60px;
 }
-
 .txtsticker:active .price {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-transition: 1s;
   transition: 1s;
-  -webkit-transform: translate(-70px);
-          transform: translate(-70px);
+  transform: translate(-70px);
 }
 
 h3 {
-  font-family: 'robotobold';
+  font-family: "robotobold";
   font-size: 16px;
 }
 
@@ -340,20 +273,14 @@ h3 {
 }
 
 .naming {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-bottom: -30px;
   margin-top: -10px;
 }
 
 .sidedish {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 p {
@@ -366,9 +293,7 @@ p {
 }
 
 .price {
-  font-family: 'robotobold';
-  display: -webkit-box;
-  display: -ms-flexbox;
+  font-family: "robotobold";
   display: flex;
   font-size: 15px;
   margin-top: 15px;
@@ -377,10 +302,7 @@ p {
 
 /*BOUTON COMMANDER*/
 .btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9408f1));
   background: linear-gradient(#FF79DA, #9408f1);
   border: none;
   color: white;
@@ -388,37 +310,26 @@ p {
   font-size: 15px;
   font-weight: bold;
   border-radius: 20px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin-top: 30px;
   margin-bottom: 35px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-right: 7px;
   padding-left: 7px;
-  -webkit-box-shadow: 3px 3px #e7e5e5;
-          box-shadow: 3px 3px #e7e5e5;
+  box-shadow: 3px 3px #e7e5e5;
   width: 100px;
 }
-
 .btn:hover {
   background: #FF79DA;
-  -webkit-box-shadow: 3px 7px #504d4d;
-          box-shadow: 3px 7px #504d4d;
-  -webkit-transition: 1s;
+  box-shadow: 3px 7px #504d4d;
   transition: 1s;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .movebtn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 /*FOOTER*/
@@ -430,7 +341,7 @@ p {
 }
 
 h6 {
-  font-family: 'shrikhand';
+  font-family: "shrikhand";
   font-weight: normal;
   color: white;
   font-size: 20px;
@@ -448,22 +359,16 @@ h6 {
 }
 
 .proposition, .partnair {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-bottom: 5px;
 }
 
 .ustensil {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-right: 10px;
 }
 
 .hands {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-right: 8px;
   font-size: 11px;
@@ -475,8 +380,6 @@ h6 {
 }
 
 .contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   color: white;
   text-decoration: none;
@@ -488,73 +391,66 @@ h6 {
     font-size: 30px;
     top: 30px;
   }
+
   .btn {
     width: 150px;
   }
+
   .imgcook {
     width: 250px;
     height: 250px;
     left: 35%;
   }
 }
-
 @media screen and (min-width: 1000px) {
   .arrow {
     top: 50px;
   }
+
   .bannerpic {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 400px;
     position: absolute;
   }
+
   .allmenu {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
+
   .menu {
     top: 475px;
   }
+
   .flexmenu {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
+
   .txtsticker {
     width: 310px;
   }
+
   .imgcook {
     width: 300px;
     height: 300px;
     left: 40%;
   }
+
   .btn {
     width: 200px;
     height: 35px;
     font-size: 25px;
   }
+
   .txtfooter {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
+
   .proposition, .partnair, .mentions, .contact {
-    width: 185px;
+    width: 195px;
   }
-}
-/*# sourceMappingURL=menu.css.map */
+}/*# sourceMappingURL=menu.css.map */
