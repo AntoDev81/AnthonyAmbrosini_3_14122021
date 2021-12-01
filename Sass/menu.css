@@ -54,34 +54,6 @@
     visibility: hidden;
   }
 }
-@-webkit-keyframes slide {
-  0% {
-    transform: translateX(-10px);
-    opacity: 0;
-  }
-  50% {
-    transform: translateX(30px);
-    opacity: 0.5;
-  }
-  100% {
-    transform: translateX(60px);
-    opacity: 1;
-  }
-}
-@keyframes slide {
-  0% {
-    transform: translateX(-10px);
-    opacity: 0;
-  }
-  50% {
-    transform: translateX(30px);
-    opacity: 0.5;
-  }
-  100% {
-    transform: translateX(60px);
-    opacity: 1;
-  }
-}
 @font-face {
   font-family: "Shrikhand";
   src: url("shrikhand/Shrikhand-Regular.otf");
@@ -220,6 +192,10 @@ span {
   color: black;
 }
 
+.fa-check-circle {
+  transition: 1s;
+}
+
 .okposition {
   display: flex;
   justify-content: flex-end;
@@ -227,16 +203,17 @@ span {
 
 .ok {
   display: flex;
+  justify-content: center;
   background-color: #99E2D0;
-  width: 60px;
   position: absolute;
   border-radius: 0px 15px 15px 0px;
   height: 65px;
-  justify-content: center;
   align-items: center;
   font-size: 19px;
   color: white;
-  z-index: -1;
+  opacity: 0;
+  transition: 0.2s;
+  transform: translateX(100%);
 }
 
 .txtsticker {
@@ -253,14 +230,17 @@ span {
 }
 .txtsticker:active .ok {
   display: flex;
-  z-index: 0;
-  transform-origin: right 50%;
-  transition: 1s;
+  opacity: 1;
   width: 60px;
+  transition: 1s;
+  transform: translateX(0px);
 }
 .txtsticker:active .price {
   transition: 1s;
   transform: translate(-70px);
+}
+.txtsticker:active .fa-check-circle {
+  transform: rotate(-360deg);
 }
 
 h3 {
@@ -279,17 +259,13 @@ h3 {
 }
 
 .sidedish {
-  display: flex;
   justify-content: space-between;
+  display: flex;
 }
 
 p {
   font-size: 15px;
   font-weight: normal;
-  display: block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .price {
@@ -319,6 +295,7 @@ p {
   padding-left: 7px;
   box-shadow: 3px 3px #e7e5e5;
   width: 100px;
+  cursor: pointer;
 }
 .btn:hover {
   background: #FF79DA;

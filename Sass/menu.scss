@@ -120,22 +120,26 @@ span{
     text-decoration: none;
     color: black;
 }
+.fa-check-circle{
+    transition: 1s;
+}
 .okposition{
     display: flex;
     justify-content: flex-end;
 }
 .ok{
     display: flex;
+    justify-content: center;
     background-color: #99E2D0;
-    width: 60px;
     position: absolute;
     border-radius: 0px 15px 15px 0px;
     height: 65px;
-    justify-content: center;
     align-items: center;
     font-size: 19px;
     color: white;
-    z-index: -1;
+    opacity: 0;
+    transition: 0.2s;
+    transform: translateX(100%);
 }
 .txtsticker{
     display: flex;
@@ -150,14 +154,17 @@ span{
     cursor: pointer;
     &:active .ok{
         display: flex;
-        z-index: 0;
-        transform-origin: right 50%;
-        transition : 1s;
+        opacity: 1;
         width: 60px;
+        transition: 1s;
+        transform: translateX(0px);
     }
     &:active .price{
         transition: 1s;
         transform: translate(-70px);
+    }
+    &:active .fa-check-circle{
+        transform: rotate(-360deg);
     }
 }
 h3{
@@ -173,16 +180,12 @@ h3{
     margin-top: -10px;
 }
 .sidedish{
-    display: flex;
     justify-content: space-between;
+    display: flex;
 }
 p{
     font-size: 15px;
     font-weight: normal;
-    display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 .price{
     font-family: 'robotobold';
@@ -210,6 +213,7 @@ p{
     padding-left: 7px;
     box-shadow: 3px 3px rgb(231, 229, 229);
     width: 100px;
+    cursor: pointer;
     &:hover{
         background: $Secondary-color;
         box-shadow: 3px 7px #504d4d;
