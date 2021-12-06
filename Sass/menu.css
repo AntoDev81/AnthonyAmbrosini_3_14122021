@@ -192,6 +192,18 @@ span {
   color: black;
 }
 
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox]:checked + .ok {
+  display: flex;
+  opacity: 1;
+  width: 60px;
+  transition: 1s;
+  transform: translateX(0px);
+}
+
 .fa-check-circle {
   transition: 1s;
 }
@@ -263,6 +275,16 @@ h3 {
   display: flex;
 }
 
+.test {
+  display: inline-block;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 p {
   font-size: 15px;
   font-weight: normal;
@@ -270,7 +292,7 @@ p {
 
 .price {
   font-family: "robotobold";
-  display: flex;
+  display: block;
   font-size: 15px;
   margin-top: 15px;
   margin-right: 20px;

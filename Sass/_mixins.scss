@@ -17,6 +17,11 @@
     margin-top: 15px;
     margin-right: 20px;
 }
+@mixin check {
+    opacity: 2;
+    transition: 1s;
+    color: $Secondary-color;
+}
 @keyframes opening{
     from{
         transform: translateY(150px);
@@ -37,8 +42,7 @@
         opacity: 0;
     }
     50% { transform: rotate(360deg);
-        opacity: 1;
-        
+        opacity: 1; 
     }
     100% {
         visibility: hidden;

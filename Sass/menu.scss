@@ -120,6 +120,16 @@ span{
     text-decoration: none;
     color: black;
 }
+input[type="checkbox"]{
+    display: none;
+}
+input[type="checkbox"]:checked + .ok{
+        display: flex;
+        opacity: 1;
+        width: 60px;
+        transition: 1s;
+        transform: translateX(0px);
+    }
 .fa-check-circle{
     transition: 1s;
 }
@@ -130,7 +140,7 @@ span{
 .ok{
     display: flex;
     justify-content: center;
-    background-color: #99E2D0;
+    background-color: $Tertiary-color;
     position: absolute;
     border-radius: 0px 15px 15px 0px;
     height: 65px;
@@ -183,13 +193,22 @@ h3{
     justify-content: space-between;
     display: flex;
 }
+.test{
+    display: inline-block;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 p{
     font-size: 15px;
     font-weight: normal;
 }
 .price{
     font-family: 'robotobold';
-    display: flex;
+    display: block;
     font-size: 15px;
     margin-top: 15px;
     margin-right: 20px;
