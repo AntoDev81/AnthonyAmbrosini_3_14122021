@@ -71,7 +71,7 @@ body{
     background-color: #F3F3F3;
     border-radius: 25px 25px 0px 0px;
     position: absolute;
-    top: 240px;
+    top: 260px;
     width: 100%;
 }
 .containername{
@@ -120,16 +120,6 @@ span{
     text-decoration: none;
     color: black;
 }
-input[type="checkbox"]{
-    display: none;
-}
-input[type="checkbox"]:checked + .ok{
-        display: flex;
-        opacity: 1;
-        width: 60px;
-        transition: 1s;
-        transform: translateX(0px);
-    }
 .fa-check-circle{
     transition: 1s;
 }
@@ -151,10 +141,17 @@ input[type="checkbox"]:checked + .ok{
     transition: 0.2s;
     transform: translateX(100%);
 }
+.ellipsis{
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 15px;
+    margin-bottom: 14px;
+    text-overflow: ellipsis;
+}
 .txtsticker{
     display: flex;
     flex-direction: column;
-    width: 98%;
+    width: 96%;
     background-color: white;
     border-radius: 15px;
     margin-left: 8px;
@@ -176,6 +173,11 @@ input[type="checkbox"]:checked + .ok{
     &:active .fa-check-circle{
         transform: rotate(-360deg);
     }
+    &:active .ellipsis{
+        overflow: hidden;
+        white-space: nowrap;
+        width: 60%;
+    }
 }
 h3{
     font-family:'robotobold';
@@ -193,18 +195,12 @@ h3{
     justify-content: space-between;
     display: flex;
 }
-.test{
-    display: inline-block;
-    width: 100%;
-    margin-top: 15px;
-    margin-bottom: 14px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
 p{
     font-size: 15px;
     font-weight: normal;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .price{
     font-family: 'robotobold';
@@ -225,7 +221,7 @@ p{
     border-radius: 20px;
     justify-content: center;
     margin-top: 30px;
-    margin-bottom: 35px;
+    margin-bottom: 60px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 7px;
@@ -248,7 +244,7 @@ p{
 .footer{
     background-color: rgb(71, 67, 67);
     position: absolute;
-    bottom: -170px;
+    bottom: -800px;
     width: 100%;
 }
 h6{
