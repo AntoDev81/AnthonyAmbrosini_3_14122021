@@ -143,14 +143,17 @@ h3{
     font-size: 20px
 }
 .pic1{
-    margin-right: 33px;
-    margin-left: 23px;
-    font-size: 20px
+    margin-right: 35px;
+    margin-left: 6px;
+    font-size: 20px;
 }
 .pic{
     margin-right: 26px;
     margin-left: 5px;
     font-size: 20px
+}
+span{
+    width: 180px;
 }
 .btnfonction{
     @include flexcenter;
@@ -172,6 +175,15 @@ h3{
     &:hover{
         transition: .5s;
         background-color: #f1e4ee
+    }
+    &:hover .fa-mobile-alt{
+        color: #9408f1;
+    }
+    &:hover .fa-list{
+        color: #9408f1
+    }
+    &:hover .fa-store{
+        color: #9408f1
     }
 }
 .containerbtn{
@@ -368,6 +380,9 @@ h5{
     .btn{
         width: 290px;
         font-size: 25px;
+    }
+    span{
+        width: 245px;
     }
     .btnfonction{
         width: 350px;

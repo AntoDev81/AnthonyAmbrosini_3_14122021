@@ -31,9 +31,13 @@ body{
     font-family:'roboto_condensedlight';
     font-weight: bold;
 }
+.loader{
+    background-color: $Primary-color;
+}
 .imgcook{
     display: block;
     position: absolute;
+    color :$Primary-color;
     width: 200px;
     height: 200px;
     top: 30%;
@@ -88,11 +92,30 @@ h1{
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.heart{
+.heart {
+    display: flex;
+    text-decoration: none;
+    cursor: pointer;
     font-size: 25px;
     margin-left: 30px;
     margin-top: 2px;
 }
+input[type="checkbox"]{
+    display: none;
+}
+input[type="checkbox"]:checked + .full{
+    @include check;
+}
+.empty{
+    position: relative;
+    opacity: 1;
+    -webkit-font-smoothing: antiliased;
+}
+.full {
+    position: absolute;
+    opacity: 0;
+}
+
                         /*PROPOSITIONS PLATS*/
 
 h2{
@@ -244,7 +267,7 @@ p{
 .footer{
     background-color: rgb(71, 67, 67);
     position: absolute;
-    bottom: -800px;
+    bottom: -820px;
     width: 100%;
 }
 h6{
@@ -298,6 +321,9 @@ h6{
         height: 250px;
         left: 35%;
     }
+    .footer{
+        bottom: -475px;
+    }
 }
 @media screen and (min-width: 1000px){
     .arrow{
@@ -332,6 +358,9 @@ h6{
         width: 200px;
         height: 35px;
         font-size: 25px;
+    }
+    .footer{
+        bottom: -50px;
     }
     .txtfooter{
         display: flex;

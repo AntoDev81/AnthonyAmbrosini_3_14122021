@@ -77,9 +77,14 @@ body {
   font-weight: bold;
 }
 
+.loader {
+  background-color: #9356DC;
+}
+
 .imgcook {
   display: block;
   position: absolute;
+  color: #9356DC;
   width: 200px;
   height: 200px;
   top: 30%;
@@ -151,9 +156,33 @@ h1 {
 }
 
 .heart {
+  display: flex;
+  text-decoration: none;
+  cursor: pointer;
   font-size: 25px;
   margin-left: 30px;
   margin-top: 2px;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox]:checked + .full {
+  opacity: 2;
+  transition: 1s;
+  color: #FF79DA;
+}
+
+.empty {
+  position: relative;
+  opacity: 1;
+  -webkit-font-smoothing: antiliased;
+}
+
+.full {
+  position: absolute;
+  opacity: 0;
 }
 
 /*PROPOSITIONS PLATS*/
@@ -329,7 +358,7 @@ p {
 .footer {
   background-color: #474343;
   position: absolute;
-  bottom: -800px;
+  bottom: -820px;
   width: 100%;
 }
 
@@ -394,6 +423,10 @@ h6 {
     height: 250px;
     left: 35%;
   }
+
+  .footer {
+    bottom: -475px;
+  }
 }
 @media screen and (min-width: 1000px) {
   .arrow {
@@ -437,6 +470,10 @@ h6 {
     width: 200px;
     height: 35px;
     font-size: 25px;
+  }
+
+  .footer {
+    bottom: -50px;
   }
 
   .txtfooter {

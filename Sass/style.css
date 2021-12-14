@@ -203,8 +203,8 @@ h3 {
 }
 
 .pic1 {
-  margin-right: 33px;
-  margin-left: 23px;
+  margin-right: 35px;
+  margin-left: 6px;
   font-size: 20px;
 }
 
@@ -212,6 +212,10 @@ h3 {
   margin-right: 26px;
   margin-left: 5px;
   font-size: 20px;
+}
+
+span {
+  width: 180px;
 }
 
 .btnfonction {
@@ -237,6 +241,15 @@ h3 {
 .btnfonction:hover {
   transition: 0.5s;
   background-color: #f1e4ee;
+}
+.btnfonction:hover .fa-mobile-alt {
+  color: #9408f1;
+}
+.btnfonction:hover .fa-list {
+  color: #9408f1;
+}
+.btnfonction:hover .fa-store {
+  color: #9408f1;
 }
 
 .containerbtn {
@@ -487,6 +500,10 @@ h6 {
   .btn {
     width: 290px;
     font-size: 25px;
+  }
+
+  span {
+    width: 245px;
   }
 
   .btnfonction {
