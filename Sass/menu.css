@@ -77,10 +77,6 @@ body {
   font-weight: bold;
 }
 
-.loader {
-  background-color: #9356DC;
-}
-
 .imgcook {
   display: block;
   position: absolute;
@@ -362,6 +358,13 @@ p {
   width: 100%;
 }
 
+.footer2 {
+  background-color: #474343;
+  position: absolute;
+  width: 100%;
+  bottom: -880px;
+}
+
 h6 {
   font-family: "shrikhand";
   font-weight: normal;
@@ -427,6 +430,10 @@ h6 {
   .footer {
     bottom: -475px;
   }
+
+  .footer2 {
+    bottom: -520px;
+  }
 }
 @media screen and (min-width: 1000px) {
   .arrow {
@@ -474,6 +481,10 @@ h6 {
 
   .footer {
     bottom: -50px;
+  }
+
+  .footer2 {
+    bottom: -100px;
   }
 
   .txtfooter {

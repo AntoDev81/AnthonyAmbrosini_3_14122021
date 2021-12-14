@@ -31,9 +31,6 @@ body{
     font-family:'roboto_condensedlight';
     font-weight: bold;
 }
-.loader{
-    background-color: $Primary-color;
-}
 .imgcook{
     display: block;
     position: absolute;
@@ -270,6 +267,12 @@ p{
     bottom: -820px;
     width: 100%;
 }
+.footer2{
+    background-color: rgb(71, 67, 67);
+    position: absolute;
+    width: 100%;
+    bottom: -880px;
+}
 h6{
     font-family: 'shrikhand';
     font-weight: normal;
@@ -324,6 +327,9 @@ h6{
     .footer{
         bottom: -475px;
     }
+    .footer2{
+        bottom: -520px;
+    }
 }
 @media screen and (min-width: 1000px){
     .arrow{
@@ -361,6 +367,9 @@ h6{
     }
     .footer{
         bottom: -50px;
+    }
+    .footer2{
+        bottom: -100px;
     }
     .txtfooter{
         display: flex;
