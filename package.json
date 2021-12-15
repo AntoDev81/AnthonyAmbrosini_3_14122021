@@ -1,0 +1,15 @@
+{
+  "name": "projet-3-openclassroom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AntoDev81/Projet3/blob/7e021cebda02e87cde92fa4fa079dc5b28092ba3/README.md"
+  },
+  "author": "",
+  "license": "ISC"
+}
